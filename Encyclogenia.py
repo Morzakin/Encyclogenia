@@ -17,8 +17,8 @@ def show_entry_fields():
 
     #establishes an ssh tunnel
     server = SSHTunnelForwarder(
-            ("ceres.ucsd.edu", 22),
-            ssh_username="ceres",
+            ("132.239.144.50", 22),
+            ssh_username="phoenix",
             ssh_pkey="/Users/tylerreagan/.ssh/id_rsa",
             remote_bind_address=('127.0.0.1', 3306))
     server.start();
