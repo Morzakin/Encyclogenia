@@ -17,7 +17,7 @@ def show_entry_fields():
 
     #establishes an ssh tunnel
     server = SSHTunnelForwarder(
-            ("132.239.144.50", 22),
+            ("phoenix_IP", 22),  //phoenix_IP obscured
             ssh_username="phoenix",
             ssh_pkey="/Users/tylerreagan/.ssh/id_rsa",
             remote_bind_address=('127.0.0.1', 3306))
@@ -25,7 +25,7 @@ def show_entry_fields():
 
     #connects to MySQL database
     db = mysql.connector.connect(user='root',
-                                 password='4aGuP.Ta',
+                                 password='root_password',   //root password obscured
                                  host='127.0.0.1',
                                  port=server.local_bind_port,
                                  database='gene_dictionary')
